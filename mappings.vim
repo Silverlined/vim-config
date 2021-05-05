@@ -1,15 +1,15 @@
-" Better nav for omnicomplete
-noremap ; j
-noremap p k
-noremap l h
-noremap ' l
+" Paste with v intead of p
 noremap v p
 
+" Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-inoremap l' <Esc>
-inoremap 'l <Esc>
+" Escape from home row
+inoremap jk <Esc>
+inoremap kj <Esc>
+
+" Correct spelling mistake
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Better tabbing
