@@ -15,6 +15,7 @@ inoremap <expr> <c-k> ("\<C-p>")
 " Escape from home row
 inoremap jk <Esc>
 inoremap kj <Esc>
+inoremap <C-c> <Esc>
 
 " Correct spelling mistake
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u

@@ -10,21 +10,18 @@ call plug#begin('~/.config/nvim/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
-    Plug 'zchee/deoplete-jedi'
     Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/nerdcommenter'
     Plug 'liuchengxu/vim-which-key'
-    Plug 'junegunn/fzf.vim'
     Plug 'mhinz/vim-startify'
     Plug 'lervag/vimtex'
     let g:tex_flavor='latex'
     let g:vimtex_view_method='zathura'
     let g:vimtex_quickfix_mode=0
     let g:tex_conceal='abdmg'
+    let g:vimtex_compiler_progname='nvr'
     
     Plug 'sirver/ultisnips'
     let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/'
@@ -36,12 +33,12 @@ call plug#begin('~/.config/nvim/plugged')
     let g:tex_conceal='abdmg'
     hi Conceal ctermbg=none
 
-    Plug 'morhetz/gruvbox'
+    Plug 'gruvbox-community/gruvbox'
     let g:gruvbox_italic=1
 
 call plug#end()
 
 set termguicolors
 colorscheme gruvbox
+highlight Normal guibg=none
 set conceallevel=1
-set formatoptions -=cro

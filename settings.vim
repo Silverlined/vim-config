@@ -9,7 +9,6 @@ set iskeyword+=-                      	" treat dash separated words as a word te
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
-set t_Co=256                            " Support 256 colors
 set conceallevel=1                      " So that I can see `` in markdown files
 set tabstop=4                           " Insert 2 spaces for a tab
 set shiftwidth=4                        " Change the number of space characters inserted for indentation
@@ -29,6 +28,12 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 setlocal spell
 set spelllang=en_gb
-set formatoptions -=o
+set scrolloff=8
+set signcolumn=yes
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+
+augroup Format-Options
+    autocmd!
+    autocmd BufEnter * setlocal formatoptions -=cro
+augroup END
 
