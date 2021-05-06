@@ -6,7 +6,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
-call plug#begin('~/.config/nvim/plugins')
+call plug#begin('~/.config/nvim/plugged')
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
@@ -24,7 +24,6 @@ call plug#begin('~/.config/nvim/plugins')
     let g:tex_flavor='latex'
     let g:vimtex_view_method='zathura'
     let g:vimtex_quickfix_mode=0
-    set conceallevel=1
     let g:tex_conceal='abdmg'
     
     Plug 'sirver/ultisnips'
@@ -33,14 +32,16 @@ call plug#begin('~/.config/nvim/plugins')
     let g:UltiSnipsJumpForwardTrigger = '<tab>'
     let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
     
-    Plug 'lervag/vimtex'
-    let g:tex_flavor='latex'
-    let g:vimtex_view_method='zathura'
-    let g:vimtex_quickfix_mode=0
-
     Plug 'KeitaNakamura/tex-conceal.vim'
     let g:tex_conceal='abdmg'
     hi Conceal ctermbg=none
-    
-    Plug 'dylanaraps/wal'
+
+    Plug 'morhetz/gruvbox'
+    let g:gruvbox_italic=1
+
 call plug#end()
+
+set termguicolors
+colorscheme gruvbox
+set conceallevel=1
+set formatoptions -=cro
