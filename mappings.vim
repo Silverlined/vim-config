@@ -35,6 +35,11 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Ex
-nnoremap <leader>e :vsplit<bar> :Ex<CR>
+" Open directory tree
+nnoremap <leader>e :NERDTreeToggle<CR>
+vmap <C-_> <plug>NERDCommenterToggle
+nmap <C-_> <plug>NERDCommenterToggle
+
+" New buffer with Ex
+nnoremap <leader>n :vsplit<bar> :Ex<CR>
 

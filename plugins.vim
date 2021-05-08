@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugged')
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     Plug 'vim-airline/vim-airline'
+    Plug 'scrooloose/NERDTree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'liuchengxu/vim-which-key'
     Plug 'mhinz/vim-startify'
