@@ -1,8 +1,14 @@
 " Change leader key
 let g:mapleader = "\<Space>"
 
+" Undo Redo
+nnoremap <C-z> u
+
 " Paste with v intead of p
 noremap v p
+noremap <C-v> p
+inoremap <C-v> <Esc>p
+vnoremap <C-c> y
 
 " Shift left (remove indent)
 inoremap <S-Tab> <<
@@ -40,6 +46,17 @@ nnoremap <leader>e :NERDTreeToggle<CR>
 vmap <C-_> <plug>NERDCommenterToggle
 nmap <C-_> <plug>NERDCommenterToggle
 
+" VimTex
+nnoremap <leader>ll :VimtexCompileSS<CR>
+nnoremap <leader>s :VimtexStop<CR>
+nnoremap <leader>q :VimtexClean<CR>
+
 " New buffer with Ex
 nnoremap <leader>n :vsplit<bar> :Ex<CR>
 
+" Terminal Emulator
+tnoremap <Esc> <C-\><C-n>
+nnoremap <C-k> :split<bar>:resize 10<bar>:terminal<CR>
+
+" Deleting
+imap <C-D> X<Esc>lbce
