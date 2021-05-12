@@ -3,6 +3,8 @@ let g:mapleader = "\<Space>"
 
 " Undo Redo
 nnoremap <C-z> u
+inoremap <C-z> <C-o>u
+vnoremap <C-z> <Esc>u
 
 " Paste with v intead of p
 noremap v p
@@ -47,9 +49,10 @@ vmap <C-_> <plug>NERDCommenterToggle
 nmap <C-_> <plug>NERDCommenterToggle
 
 " VimTex
-nnoremap <leader>ll :VimtexCompileSS<CR>
+nnoremap <leader>ll :VimtexCompile<CR>
 nnoremap <leader>s :VimtexStop<CR>
 nnoremap <leader>q :VimtexClean<CR>
+nnoremap <leader>z :VimtexErrors<CR>
 
 " New buffer with Ex
 nnoremap <leader>n :vsplit<bar> :Ex<CR>
@@ -60,3 +63,12 @@ nnoremap <C-k> :split<bar>:resize 10<bar>:terminal<CR>
 
 " Deleting
 imap <C-D> X<Esc>lbce
+
+" Replace a word
+nnoremap <leader>r *:%s//
+
+" New line without insert mode
+nnoremap <CR> o<Esc>j
+
+" Enter block visual mode
+nnoremap <C-b> <C-v>

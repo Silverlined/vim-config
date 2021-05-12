@@ -17,13 +17,55 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'scrooloose/nerdcommenter'
     Plug 'liuchengxu/vim-which-key'
     Plug 'mhinz/vim-startify'
+    "let g:ascii = [
+                "\' _______           _                  ______              ',
+                "\'( ______)         | |                / _____)        _    ',
+                "\'| |___   ____   __| |_   _  ____ ___( (____  _____ _| |_  ',
+                "\'|  ___) |  _ \ / _  | | | |/ ___) _ \\____ \(____ (_   _) ',
+                "\'| |_____| | | ( (_| | |_| | |  | |_| |____) ) ___ | | |_  ',
+                "\'|_______)_| |_|\____|____/|_|   \___(______/\_____|  \__) ',
+            "\''
+            "\]
+    let g:ascii = [
+            \'                                                                ,-.               ',
+            \'                                                               / \  `.  __..-,O   ',
+            \'                                                              :   \ --  _..- .    ',
+            \'                                                              |    . .-  `.  .    ',
+            \'                                                              :     .     .`.     ',
+            \'                                                               \     `.  /  ..    ',
+            \'                                                                \      `.     .   ',
+            \'                                                                 `,       `.   \  ',
+            \'                                                                ,|,`.        `-.\ ',
+            \'                                                                .||  ``-...__..-` ',
+            \'  _______           _                  ______                   |  |              ',
+            \' ( ______)         | |                / _____)        _         |__|              ',
+            \' | |___   ____   __| |_   _  ____ ___( (____  _____ _| |_       /||\              ',
+            \' |  ___) |  _ \ / _  | | | |/ ___) _ \\____ \(____ (_   _)     //||\\             ',
+            \' | |_____| | | ( (_| | |_| | |  | |_| |____) ) ___ | | |_     // || \\            ',
+            \' |_______)_| |_|\____|____/|_|   \___(______/\_____|  \__) __//__||__\\__         ',
+            \'                                                          |--------------|        ',
+            \'',
+            \]
+    let g:startify_custom_header = g:ascii 
+
     Plug 'lervag/vimtex'
     let g:tex_flavor='latex'
     let g:vimtex_view_method='zathura'
     let g:vimtex_quickfix_open_on_warning=0
     let g:vimtex_quickfix_mode=0
     "let g:vimtex_compiler_progname='nvr'
-    
+    "let g:vimtex_compiler_latexmk = { 
+        "\ 'executable' : 'latexmk',
+        "\ 'options' : [ 
+        "\   '-xelatex',
+        "\   '-file-line-error',
+        "\   '-synctex=1',
+        "\   '-interaction=nonstopmode',
+        "\ ],
+        "\}
+    "let g:vimtex_compiler_latexmk_engines = {
+        "\ '_'                : '-xelatex'
+        "\}
     Plug 'sirver/ultisnips'
     let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/'
     let g:UltiSnipsExpandTrigger = '<tab>'
