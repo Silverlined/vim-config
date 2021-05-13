@@ -56,6 +56,7 @@ nnoremap <leader>z :VimtexErrors<CR>
 
 " New buffer with Ex
 nnoremap <leader>n :vsplit<bar> :Ex<CR>
+nnoremap <C-p> :GFiles<CR>
 
 " Terminal Emulator
 tnoremap <Esc> <C-\><C-n>
@@ -72,3 +73,5 @@ nnoremap <CR> o<Esc>j
 
 " Enter block visual mode
 nnoremap <C-b> <C-v>
+
+

@@ -79,6 +79,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'gruvbox-community/gruvbox'
     let g:gruvbox_italic=1
 
+    " CoC
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 set termguicolors
