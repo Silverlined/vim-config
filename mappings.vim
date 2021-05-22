@@ -56,7 +56,10 @@ nnoremap <leader>z :VimtexErrors<CR>
 
 " New buffer with Ex
 nnoremap <leader>n :vsplit<bar> :Ex<CR>
+
+" FZF
 nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>f :Files<CR>
 
 " Terminal Emulator
 tnoremap <Esc> <C-\><C-n>
@@ -69,9 +72,7 @@ imap <C-D> X<Esc>lbce
 nnoremap <leader>r *:%s//
 
 " New line without insert mode
-nnoremap <CR> o<Esc>j
+nnoremap <CR> o<Esc>
 
 " Enter block visual mode
 nnoremap <C-b> <C-v>
-
-

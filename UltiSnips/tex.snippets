@@ -3,6 +3,7 @@ snippet template "Basic template" b
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{indentfirst}
 \usepackage{lmodern}
 \usepackage{textcomp}
 \usepackage{amsmath, amssymb}
@@ -10,7 +11,16 @@ snippet template "Basic template" b
 \usepackage{listings}
 \usepackage{tcolorbox}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \graphicspath{{./res/}}
+\usepackage[
+backend=biber,
+natbib=true,
+style=numeric,
+sorting=none
+]{biblatex}
+\addbibresource{ref.bib}
+
 
 \begin{document}
 \title{$1}
@@ -20,11 +30,32 @@ snippet template "Basic template" b
 \maketitle
 
 	$0
+
+
+\medskip
+
+% \printbibliography
 \end{document}
+
 endsnippet
 
-snippet section "section{}" bA
-\section{$1}
+snippet sec "section*{}" b
+\section*{$1}
+$0
+endsnippet
+
+snippet section "section*{}" b
+\section*{$1}
+$0
+endsnippet
+
+snippet subsec "subsection*{}" b
+\subsection*{$1}
+$0
+endsnippet
+
+snippet subsection "subsection*{}" b
+\subsection*{$1}
 $0
 endsnippet
 

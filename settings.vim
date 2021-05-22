@@ -31,6 +31,7 @@ setlocal spell
 set spell spelllang=en_gb
 set scrolloff=8
 set signcolumn=yes
+set whichwrap+=<,>,[,]
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 augroup Format-Options

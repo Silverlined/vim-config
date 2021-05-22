@@ -66,6 +66,9 @@ call plug#begin('~/.config/nvim/plugged')
     "let g:vimtex_compiler_latexmk_engines = {
         "\ '_'                : '-xelatex'
         "\}
+    let g:vimtex_compiler_latexmk = {
+            \ 'build_dir' : 'build',
+            \}
     Plug 'sirver/ultisnips'
     let g:UltiSnipsSnippetsDir = $HOME.'/.config/nvim/'
     let g:UltiSnipsExpandTrigger = '<tab>'
@@ -81,7 +84,8 @@ call plug#begin('~/.config/nvim/plugged')
 
     " CoC
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'junegunn/fzf'
+    let g:python3_host_prog = '/usr/bin/python3' 
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
 call plug#end()
