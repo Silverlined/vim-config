@@ -91,8 +91,23 @@ endsnippet
 
 snippet dm "Math" wA
 \[
-$1
-\] $0
+$0
+\] 
+endsnippet
+
+snippet equation "begin{equation}" b
+\begin{equation}
+$0
+\end{equation}
+
+endsnippet
+
+snippet delta "\delta{}" iw
+\delta{$1}$0
+endsnippet
+
+snippet frac "\frac{}{}" iw
+\frac{$1}{$2}$0
 endsnippet
 
 snippet '([A-Za-z])(\d)' "auto subscript" wrA
@@ -148,11 +163,11 @@ snippet fig "Figure environment" b
 endsnippet
 
 snippet ref "Figure reference" w
-\ref{fig:$0}
+\ref{fig:$0} $1
 endsnippet
 
 snippet cite "Reference" w
-\cite{$0}
+\cite{$0} $1
 endsnippet
 
 snippet table "Table environment" b
@@ -215,20 +230,22 @@ endsnippet
 snippet subfigure "\begin{subfigure}" b
 \begin{figure}[h]
 \centering
-    \begin{subfigure}[h]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{$0}
-        \caption{$1}
-        \label{fig:$2}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[h]{0.4\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{$3}
-        \caption{$4}
-        \label{fig:$5}
-    \end{subfigure}
+	\begin{subfigure}[h]{0.4\textwidth}
+	\centering
+		\includegraphics[width=\textwidth]{$0}
+		\caption{$1}
+		\label{fig:$2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[h]{0.4\textwidth}
+	\centering
+		\includegraphics[width=\textwidth]{$3}
+		\caption{$4}
+		\label{fig:$5}
+	\end{subfigure}
 \end{figure}
+\caption{$6}
+\label{fig:$7}
 endsnippet
 
 snippet graphics "\includegraphics{}" w

@@ -94,3 +94,5 @@ set termguicolors
 colorscheme gruvbox
 highlight Normal guibg=none
 set conceallevel=1
+
+autocmd FileType tex :CocDisable
