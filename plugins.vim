@@ -15,7 +15,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/NERDTree'
     Plug 'scrooloose/nerdcommenter'
-    Plug 'liuchengxu/vim-which-key'
+    "Plug 'liuchengxu/vim-which-key'
     Plug 'mhinz/vim-startify'
     "let g:ascii = [
                 "\' _______           _                  ______              ',
@@ -83,16 +83,15 @@ call plug#begin('~/.config/nvim/plugged')
     let g:gruvbox_italic=1
 
     " CoC
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    let g:python3_host_prog = '/usr/bin/python3' 
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "let g:python3_host_prog = '/usr/bin/python3' 
+
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-set termguicolors
 colorscheme gruvbox
 highlight Normal guibg=none
-set conceallevel=1
 
-autocmd FileType tex :CocDisable
+"autocmd FileType tex :CocDisable

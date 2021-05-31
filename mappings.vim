@@ -21,8 +21,8 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " Escape from home row
-inoremap jk <Esc>
-inoremap kj <Esc>
+"inoremap jk <Esc>
+"inoremap kj <Esc>
 inoremap <C-c> <Esc>
 
 " Correct spelling mistake
@@ -76,3 +76,9 @@ nnoremap <CR> o<Esc>
 
 " Enter block visual mode
 nnoremap <C-b> <C-v>
+
+" Fix arrow keys
+imap ^[OA <ESC>ki
+imap ^[OB <ESC>ji
+imap ^[OC <ESC>li
+imap ^[OD <ESC>hi
