@@ -1,7 +1,7 @@
 filetype plugin indent on
 syntax enable                           " Enables syntax highlighing
-set hidden                              " Required to keep multiple buffers open multiple buffers
-"set nowrap                              " Display long lines as just one line
+set hidden                              " Required to keep multiple buffers open
+"set nowrap                             " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set fileencoding=utf-8                  " The encoding written to file
 set ruler                               " Show the cursor position all the time
@@ -28,19 +28,26 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set list
-set listchars+=trail:◦
+set listchars+=trail:◦                  " Leave trailing spaces
 set notermguicolors
 
-setlocal spell
-set spell spelllang=en_gb
+"setlocal spell
+"set spell spelllang=en_gb
 set scrolloff=8
-set signcolumn=yes
+"set signcolumn=yes
 set whichwrap+=<,>,[,]
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
 augroup Format-Options
     autocmd!
     autocmd BufEnter * setlocal formatoptions -=cro
+    autocmd TermOpen * startinsert
 augroup END
 
-autocmd TermOpen * startinsert
+augroup markdownSpell
+    autocmd!
+    autocmd FileType latex,tex,md,markdown setlocal spell
+    autocmd BufRead,BufNewFile *.md,*.tex setlocal spell
+augroup END
+
+

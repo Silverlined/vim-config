@@ -9,14 +9,15 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
     " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
+    "Plug 'sheerun/vim-polyglot'
     " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-    Plug 'vim-airline/vim-airline'
+    "Plug 'jiangmiao/auto-pairs'
+    "Plug 'vim-airline/vim-airline'
     Plug 'scrooloose/NERDTree'
     Plug 'scrooloose/nerdcommenter'
+    "Plug 'ackyshake/VimCompletesMe'
     "Plug 'liuchengxu/vim-which-key'
-    Plug 'mhinz/vim-startify'
+    "Plug 'mhinz/vim-startify'
     "let g:ascii = [
                 "\' _______           _                  ______              ',
                 "\'( ______)         | |                / _____)        _    ',
@@ -74,7 +75,7 @@ call plug#begin('~/.config/nvim/plugged')
     let g:UltiSnipsExpandTrigger = '<tab>'
     let g:UltiSnipsJumpForwardTrigger = '<tab>'
     let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-    
+
     Plug 'KeitaNakamura/tex-conceal.vim'
     let g:tex_conceal='abdmg'
     hi Conceal ctermbg=none

@@ -67,6 +67,8 @@ nnoremap <C-k> :split<bar>:resize 10<bar>:terminal<CR>
 
 " Deleting
 imap <C-D> X<Esc>lbce
+inoremap <C-H> <C-w>
+
 
 " Replace a word
 nnoremap <leader>r *:%s//
