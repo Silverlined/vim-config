@@ -12,6 +12,7 @@ snippet template "Basic template" b
 \usepackage{tcolorbox}
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{siunitx}
 \graphicspath{{./res/}}
 \usepackage[
 backend=biber,
@@ -163,11 +164,11 @@ snippet fig "Figure environment" b
 endsnippet
 
 snippet ref "Figure reference" w
-\ref{fig:$0} $1
+\ref{fig:$1} $0
 endsnippet
 
 snippet cite "Reference" w
-\cite{$0} $1
+\cite{$1} $0
 endsnippet
 
 snippet table "Table environment" b

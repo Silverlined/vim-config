@@ -36,6 +36,7 @@ vnoremap > >gv
 nnoremap <C-s> :w<CR>
 nnoremap <C-q> :q<CR>
 nnoremap <C-\> :q!<CR>
+inoremap <C-s> <ESC>:w<CR>
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
@@ -68,7 +69,6 @@ nnoremap <C-k> :split<bar>:resize 10<bar>:terminal<CR>
 " Deleting
 imap <C-D> X<Esc>lbce
 inoremap <C-H> <C-w>
-
 
 " Replace a word
 nnoremap <leader>r *:%s//
